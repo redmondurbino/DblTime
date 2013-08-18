@@ -38,7 +38,7 @@ int time_offset = 30; // hardcodes offset to 15 hours ahead
 
 int app_state = APP_IDLE_STATE;
 
-int splash_timer = 0;
+int splash_timer = 5;
 
 BmpContainer time_am_pm_image;
 BmpContainer time2_am_pm_image;
@@ -502,7 +502,7 @@ void handle_init(AppContextRef ctx)
    setmode_timer = SETMODE_SECONDS;
     time_offset = 30; // hardcodes offset to 15 hours ahead
 
-   splash_timer = 0;
+   splash_timer = 5;
    // END manual var intialization
 
    app_state = APP_IDLE_STATE;
