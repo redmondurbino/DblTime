@@ -18,6 +18,8 @@ Window window;
 #define TOTAL_TZ_IMAGES 5
 #define SNOOZE_SECONDS 15
 #define SETMODE_SECONDS 20
+// hardcodes offset to 15 hours ahead
+#define DEFAULT_TIME_OFFSET 30
 
 typedef enum {APP_IDLE_STATE = 0, APP_SNOOZE_STATE, APP_CHIME_STATE, APP_MD_STATE, APP_SECS_STATE, APP_OFFSET_STATE, STATE_COUNT} APP_STATE;
 
@@ -34,7 +36,7 @@ bool refresh_display = false;
 
 int snooze_timer = SNOOZE_SECONDS;
 int setmode_timer = SETMODE_SECONDS;
-int time_offset = 30; // hardcodes offset to 15 hours ahead
+int time_offset = DEFAULT_TIME_OFFSET;
 
 int app_state = APP_IDLE_STATE;
 
@@ -500,7 +502,7 @@ void handle_init(AppContextRef ctx)
 
    snooze_timer = SNOOZE_SECONDS;
    setmode_timer = SETMODE_SECONDS;
-    time_offset = 30; // hardcodes offset to 15 hours ahead
+   time_offset = DEFAULT_TIME_OFFSET;
 
    splash_timer = 5;
    // END manual var intialization
