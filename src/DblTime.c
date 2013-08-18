@@ -38,7 +38,7 @@ int time_offset = 30; // hardcodes offset to 15 hours ahead
 
 int app_state = APP_IDLE_STATE;
 
-int splash_timer = 5;
+int splash_timer = 0;
 
 BmpContainer time_am_pm_image;
 BmpContainer time2_am_pm_image;
@@ -502,7 +502,7 @@ void handle_init(AppContextRef ctx)
    setmode_timer = SETMODE_SECONDS;
     time_offset = 30; // hardcodes offset to 15 hours ahead
 
-   splash_timer = 5;
+   splash_timer = 0;
    // END manual var intialization
 
    app_state = APP_IDLE_STATE;
@@ -1857,7 +1857,7 @@ void pbl_main(void *params)
       .tick_info =
       {
          .tick_handler = &handle_second_tick,
-         .tick_units = SECOND_UNIT
+         .tick_units = MINUTE_UNIT
       }
    };
 
