@@ -1,3 +1,12 @@
+Note: 
+This is a watch face based on the DblTime app. 
+It uses hard coded time offsets.
+Current offsets are +12 hours to +16 hours,
+which corresponds to time zones in the US to 
+Manila time.
+
+DblTime notes below:
+
 NOTE: to allow full use of the buttons, DblTime
    loads in as an app (at the same menu level
    as "Settings" on the Pebble), not as a
