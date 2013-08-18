@@ -7,8 +7,8 @@ PBL_APP_INFO(MY_UUID,
 	     "DblTime", "Pebble Technology & KD5RXT",
 	     1, 6, /* App major/minor version */
 	     RESOURCE_ID_IMAGE_MENU_ICON,
-//	     APP_INFO_WATCH_FACE);
-	     APP_INFO_STANDARD_APP);
+	     APP_INFO_WATCH_FACE);
+//	     APP_INFO_STANDARD_APP);
 
 Window window;
 
@@ -34,7 +34,7 @@ bool refresh_display = false;
 
 int snooze_timer = SNOOZE_SECONDS;
 int setmode_timer = SETMODE_SECONDS;
-int time_offset = 0;
+int time_offset = 30; // hardcodes offset to 15 hours ahead
 
 int app_state = APP_IDLE_STATE;
 
@@ -500,7 +500,7 @@ void handle_init(AppContextRef ctx)
 
    snooze_timer = SNOOZE_SECONDS;
    setmode_timer = SETMODE_SECONDS;
-   time_offset = 0;
+    time_offset = 30; // hardcodes offset to 15 hours ahead
 
    splash_timer = 5;
    // END manual var intialization
