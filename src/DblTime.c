@@ -25,7 +25,7 @@ PblTm previous_time;
 PblTm previous_time2;
 PblTm current_time2;
 
-bool chime_enabled = true;
+bool chime_enabled = false;
 bool snooze_enabled = false;
 bool show_seconds = true;
 bool month_before_day = true;
@@ -491,7 +491,7 @@ void handle_init(AppContextRef ctx)
 
    // version 1.1 of SDK requires vars to be intialized manually
    // START manual var intialization
-   chime_enabled = true;
+   chime_enabled = false;
    snooze_enabled = false;
    show_seconds = true;
    month_before_day = true;
