@@ -27,7 +27,7 @@ PblTm current_time2;
 
 bool chime_enabled = true;
 bool snooze_enabled = false;
-bool show_seconds = false;
+bool show_seconds = true;
 bool month_before_day = true;
 bool toggle_flag = false;
 bool refresh_display = false;
@@ -493,7 +493,7 @@ void handle_init(AppContextRef ctx)
    // START manual var intialization
    chime_enabled = true;
    snooze_enabled = false;
-   show_seconds = false;
+   show_seconds = true;
    month_before_day = true;
    toggle_flag = false;
    refresh_display = false;
@@ -1857,7 +1857,7 @@ void pbl_main(void *params)
       .tick_info =
       {
          .tick_handler = &handle_second_tick,
-         .tick_units = MINUTE_UNIT
+         .tick_units = SECOND_UNIT
       }
    };
 
